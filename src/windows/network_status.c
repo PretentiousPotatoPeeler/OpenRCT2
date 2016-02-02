@@ -151,6 +151,7 @@ static void window_network_status_textinput(rct_window *w, int widgetIndex, char
 	}
 	if (text == NULL) {
 		network_shutdown_client();
+		window_network_status_close();
 	} else {
 		network_send_password(_password);
 	}
